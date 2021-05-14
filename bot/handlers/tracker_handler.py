@@ -13,7 +13,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from bot import LOCAL, STATUS, CONFIG, COMMAND
 
-@Client.on_message(Filters.command(COMMAND.SET_TRACKER))
+@Client.on_message(filters.command(COMMAND.SET_TRACKER))
 async def set(client : Client, message: Message):
     args = message.text.split(" ")
     if len(args) <= 1:
